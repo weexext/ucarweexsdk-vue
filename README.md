@@ -17,8 +17,15 @@ import uweex from 'weex-ext'
 //常用utils
 uweex.utils.isString('xx');
 
-//发送全局时间
+//发送全局事件
 uweex.bridge.postGlobalEvent('test', {key: '你好'});
+
+//接收全局事件
+uweex.bridge.addEventListener('test',(e)=>{
+    
+})
+//注销全局事件
+uweex.bridge.removeEventListener('test')
 
 //打开新的页面
 let options = {
